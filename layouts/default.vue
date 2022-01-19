@@ -5,17 +5,16 @@
         <v-row align="center" justify="space-between" class="py-4">
           <v-col cols="auto">
             <a href="/">
-              <v-img
-                :lazy-src="$store.state.config.site_logo"
-                max-height="120"
-                max-width="200"
-                :src="$store.state.config.site_logo"
-              ></v-img>
+              <img
+                lazy-src="~/assets/images/logo-nav.png"
+                width="180"
+                src='~/assets/images/logo-nav.png'
+              />
             </a>
           </v-col>
-          <v-col cols class="d-none d-md-block">
+          <v-col cols class="d-none d-md-block mt-2">
             <v-btn
-              class="ma-1 font-weight-bold "
+              class="ma-1 font-weight-bold"
               nuxt
               text
               v-for="item of menu_items"
@@ -58,7 +57,7 @@
           </v-col>
           <v-col cols="auto">
             <div class="d-none d-md-block">
-              <v-btn color="primary" depressed href="#join-newsletter">
+              <v-btn color="primary" depressed href="#join-newsletter" class="text--white">
                 Join Newsletter
               </v-btn>
             </div>

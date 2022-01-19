@@ -3,7 +3,7 @@ import colors from 'vuetify/es5/util/colors';
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Swati's Blog",
+    title: "AdventuresPedia",
     meta: [
       { charset: 'utf-8' },
       {
@@ -136,6 +136,9 @@ export default {
     theme: {
       dark: false,
       themes: {
+        light:{
+          primary: '#eb640e'
+        },
         dark: {
           primary: colors.blue.darken2,
           accent: colors.grey.darken3,
