@@ -1,44 +1,15 @@
 {
-    "live": {
-        "awscloudformation": {
-            "AuthRoleName": "amplify-adventurespedia-live-215658-authRole",
-            "UnauthRoleArn": "arn:aws:iam::147722328687:role/amplify-adventurespedia-live-215658-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::147722328687:role/amplify-adventurespedia-live-215658-authRole",
-            "Region": "us-east-1",
-            "DeploymentBucketName": "amplify-adventurespedia-live-215658-deployment",
-            "UnauthRoleName": "amplify-adventurespedia-live-215658-unauthRole",
-            "StackName": "amplify-adventurespedia-live-215658",
-            "StackId": "arn:aws:cloudformation:us-east-1:147722328687:stack/amplify-adventurespedia-live-215658/a2aa75a0-7944-11ec-82b2-123d183038a7",
-            "AmplifyAppId": "d3iz8yqyq6ghc"
-        },
-        "categories": {
-            "hosting": {
-                "amplifyhosting": {
-                    "appId": "d3iz8yqyq6ghc",
-                    "type": "cicd"
-                }
-            }
-        }
-    },
-    "dev": {
-        "awscloudformation": {
-            "AuthRoleName": "amplify-adventurespedia-dev-233104-authRole",
-            "UnauthRoleArn": "arn:aws:iam::147722328687:role/amplify-adventurespedia-dev-233104-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::147722328687:role/amplify-adventurespedia-dev-233104-authRole",
-            "Region": "us-east-1",
-            "DeploymentBucketName": "amplify-adventurespedia-dev-233104-deployment",
-            "UnauthRoleName": "amplify-adventurespedia-dev-233104-unauthRole",
-            "StackName": "amplify-adventurespedia-dev-233104",
-            "StackId": "arn:aws:cloudformation:us-east-1:147722328687:stack/amplify-adventurespedia-dev-233104/ca41bb20-7951-11ec-9d7b-0a697ec36cff",
-            "AmplifyAppId": "d3e6ru45z4il2n"
-        },
-        "categories": {
-            "hosting": {
-                "amplifyhosting": {
-                    "appId": "d3e6ru45z4il2n",
-                    "type": "cicd"
-                }
-            }
-        }
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-blogsite-prod-234325-authRole",
+      "UnauthRoleArn": "arn:aws:iam::147722328687:role/amplify-blogsite-prod-234325-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::147722328687:role/amplify-blogsite-prod-234325-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-blogsite-prod-234325-deployment",
+      "UnauthRoleName": "amplify-blogsite-prod-234325-unauthRole",
+      "StackName": "amplify-blogsite-prod-234325",
+      "StackId": "arn:aws:cloudformation:us-east-1:147722328687:stack/amplify-blogsite-prod-234325/825c0d40-7953-11ec-b366-0a4c30c7325b",
+      "AmplifyAppId": "d1nszwyu52rqv7"
     }
+  }
 }
