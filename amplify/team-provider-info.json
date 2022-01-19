@@ -1,0 +1,23 @@
+{
+  "live": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-adventurespedia-live-215658-authRole",
+      "UnauthRoleArn": "arn:aws:iam::147722328687:role/amplify-adventurespedia-live-215658-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::147722328687:role/amplify-adventurespedia-live-215658-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-adventurespedia-live-215658-deployment",
+      "UnauthRoleName": "amplify-adventurespedia-live-215658-unauthRole",
+      "StackName": "amplify-adventurespedia-live-215658",
+      "StackId": "arn:aws:cloudformation:us-east-1:147722328687:stack/amplify-adventurespedia-live-215658/a2aa75a0-7944-11ec-82b2-123d183038a7",
+      "AmplifyAppId": "d3iz8yqyq6ghc"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d3iz8yqyq6ghc",
+          "type": "cicd"
+        }
+      }
+    }
+  }
+}

@@ -170,7 +170,7 @@
       </v-col>
       <v-col cols class="pt-2 pt-md-3 fill-height my-auto">
           <div class="text-subtitle-2 grey--text">
-            WANT TO GET LATEST UPDATES WHENEVER WE POST A BLOG?
+            WANT TO GET LATEST UPDATES WHENEVER WE POST A NEW BLOG?
           </div>
           <div class="d-flex align-items-center mt-2" id="join-newsletter">
             <div class="flex-grow-1">
