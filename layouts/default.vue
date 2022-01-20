@@ -198,7 +198,7 @@
         class="py-4 text-center grey--text"
         cols="12"
       >
-        <span>&copy; {{ new Date().getFullYear() }}</span> — Travel Payouts
+        <span>&copy; {{ new Date().getFullYear() }}</span> — AdventuresPedia
       </v-col>
     </v-row>
   </v-footer>

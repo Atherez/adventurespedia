@@ -44,7 +44,7 @@
                 :description="post.excerpt.rendered"
                 :quote="post.excerpt.rendered"
               >
-                <v-icon color="primary">mdi-facebook</v-icon>
+                <v-icon color="blue">mdi-facebook</v-icon>
               </ShareNetwork>
               <ShareNetwork
                 network="twitter"

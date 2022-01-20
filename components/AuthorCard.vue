@@ -29,7 +29,8 @@
                 icon
                 class="primary--text"
                 :href="author.yoast_head_json.schema['@graph'].filter(s=> s['@type'] == 'Person')[0].sameAs[0]"
-                target="_blank">
+                target="_blank"
+                color="blue">
                 <v-icon>mdi-linkedin</v-icon>
               </v-btn>
             </div>

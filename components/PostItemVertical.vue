@@ -43,7 +43,7 @@
     <v-card-text class="post-excerpt pt-1 flex-grow-1" v-html="post.excerpt.rendered">
     </v-card-text>
 
-    <v-card-text class="pt-2">
+    <v-card-text class="pt-2" >
       <a style="text-decoration: none;" class="primary--text font-weight-bold" :href="`/post/${post.slug}`"> READ MORE > </a>
     </v-card-text>
   </v-card>
