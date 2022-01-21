@@ -1,7 +1,7 @@
 <template>
   <div class="posts-page pa-4">
     <v-container class="py-4 px-0 px-lg-10">
-      <v-row v-if="tags">
+      <v-row v-if="tags.length > 1">
         <v-col cols="auto" v-for="tag of init_tags" :key="tag.id" class="px-0 ">
          <v-btn
             class="ma-2 p-0 white--text font-weight-bold small"
