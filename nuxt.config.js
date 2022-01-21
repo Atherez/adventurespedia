@@ -1,4 +1,6 @@
 import colors from 'vuetify/es5/util/colors';
+const axios = require('axios');
+
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -119,6 +121,7 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     'vue-social-sharing/nuxt',
+    '@nuxtjs/sitemap',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -159,5 +162,40 @@ export default {
 
   googleAnalytics: {
     id: 'G-GH00M6YR00'
-  }
+  },
+
+  sitemap: {
+    routes: async () => {
+      // Initiate axios
+      const wp_url = 'https://blog.adventurespedia.com'
+      const routes = ['/about', '/privacy-policy', '/terms-and-conditions', '/contact-us', '/',];
+
+      // all the posts
+      let response = await axios.get(`${wp_url}/index.php/wp-json/wp/v2/posts`, {
+        params: {
+          per_page: 100
+        }
+      });
+      if(response && response.data){
+        const blogPosts = response.data;
+        for (let pi= 0; pi < blogPosts.length; pi+= 1) {
+          routes.push(`/post/${blogPosts[pi].slug}`)
+        }
+      }
+
+      // all the categories
+      response = await axios.get(`${wp_url}/index.php/wp-json/wp/v2/categories`);
+      if(response && response.data){
+        const categories = response.data ? response.data.filter(c=>c.slug != 'uncategorized'):[]
+        for (let pi= 0; pi < categories.length; pi+= 1) {
+          routes.push(`/posts/${categories[pi].slug}`)
+        }
+      }
+
+      return routes;
+    },
+    path: '/sitemap.xml',
+    gzip: true,
+    generate: false,
+  },
 }
