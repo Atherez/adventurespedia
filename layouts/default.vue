@@ -57,7 +57,7 @@
           </v-col>
           <v-col cols="auto">
             <div class="d-none d-md-block">
-              <v-btn color="primary" depressed href="#join-newsletter" class="text--white">
+              <v-btn color="primary" depressed class="text--white" :href="$store.state.config.mailchimp_form">
                 Join Newsletter
               </v-btn>
             </div>
@@ -185,8 +185,8 @@
               </v-text-field>
             </div>
             <div class="px-2">
-              <v-btn color="primary">
-                Subscribe
+              <v-btn color="primary" :href="$store.state.config.mailchimp_form">
+                Join Newsletter
               </v-btn>
             </div>
           </div>
