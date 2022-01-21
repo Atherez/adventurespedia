@@ -36,11 +36,11 @@
                 }}
               </span>
             </v-col>
-            <v-col cols="auto" class="pl-sm-2 black--text text-subtitle-2 d-flex py-0">
+            <!-- <v-col cols="auto" class="pl-sm-2 black--text text-subtitle-2 d-flex py-0">
                <v-icon small color="grey lighten-1">mdi-clock</v-icon>
                <span class="d-none d-sm-block px-1">Reading time:</span>
               <read-time :text="post.content.rendered" :no_icon="true"/>
-            </v-col>
+            </v-col> -->
             <v-col order="4" cols class="text-right pl-0 py-0" style="text-decoration: none">
               <ShareNetwork
                 network="facebook"

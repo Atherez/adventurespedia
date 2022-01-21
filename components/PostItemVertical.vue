@@ -33,9 +33,9 @@
         year: 'numeric', month: 'long', day: 'numeric'
       }) }}
       </div>
-      <div class="pl-3">
+      <!-- <div class="pl-3">
         <read-time :text="post.content.rendered"/>
-      </div>
+      </div> -->
     </v-card-text>
 
     <v-card-title class="post-title pt-1 pb-0">{{ post.title.rendered }}</v-card-title>
