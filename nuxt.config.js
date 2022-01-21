@@ -47,7 +47,7 @@ export default {
       {
         hid: 'og:title',
         name: 'og:title',
-        content: `Swati's Blog`,
+        content: `AdventuresPedia`,
       },
       {
         hid: 'og:description',
@@ -73,7 +73,7 @@ export default {
       {
         hid: 'twitter:title',
         name: 'twitter:title',
-        content: `Swati's Blog`,
+        content: `AdventuresPedia`,
       },
       {
         hid: 'twitter:description',
