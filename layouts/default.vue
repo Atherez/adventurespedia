@@ -66,11 +66,6 @@
             </v-btn>
           </v-col>
         </v-row>
-        <v-row no-gutters class="d-none d-md-block bg-white">
-          <v-col>
-            <v-divider></v-divider>
-          </v-col>
-        </v-row>
       </v-container>
     </v-app-bar>
     <v-main>

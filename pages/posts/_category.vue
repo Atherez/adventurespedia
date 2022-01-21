@@ -55,7 +55,7 @@ export default {
     },
   },
   head(){
-    const title = `${this.current_category.name} - ${this.$store.state.config.site_title}`;
+    const title = `${this.$store.state.config.site_title} | ${this.current_category.name}`;
     const description = this.current_category.description;
     return this.$seo(title, description, this.$route.path);
   },

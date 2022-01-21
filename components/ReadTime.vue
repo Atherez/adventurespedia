@@ -1,6 +1,6 @@
 <template>
   <span>
-    <v-icon small color="grey lighten-1" v-if="!no_icon">mdi-clock</v-icon> {{timeToRead}} min.
+    <v-icon small color="grey lighten-1" v-if="!no_icon">mdi-clock</v-icon> {{timeToRead}} min{{timeToRead>1?'s':''}}.
   </span>
 </template>
 

@@ -53,3 +53,17 @@
       </v-row>
     </v-container>
 </template>
+
+<script>
+export default {
+  components: {
+  },
+  computed: {
+  },
+  head(){
+    const title = `${this.$store.state.config.site_title} | Privacy Policy`;
+    const description = 'Privacy Policy for users'
+    return this.$seo(title, description, this.$route.path);
+  },
+}
+</script>

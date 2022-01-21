@@ -32,7 +32,7 @@
           <v-col cols="12" md="12" class="px-0 pb-0">
             <v-row>
               <v-col>
-                <div class="section-title">The most relevant posts</div>
+                <div class="section-title">Most relevant posts</div>
                 <v-divider class="mt-2"></v-divider>
               </v-col>
             </v-row>
@@ -127,6 +127,11 @@ export default {
   },
   data() {
     return {}
+  },
+  head(){
+    const title = `${this.$store.state.config.site_title} | Home`;
+    const description = 'Welcome to AdventuresPedia'
+    return this.$seo(title, description, this.$route.path);
   },
 };
 </script>

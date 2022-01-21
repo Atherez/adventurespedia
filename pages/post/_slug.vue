@@ -5,7 +5,7 @@
         <v-col cols="12">
           <h1 v-html="post.title.rendered"></h1>
           <v-row class="mt-0" align="center">
-            <v-col cols="auto" color="primary">
+            <v-col cols="auto" color="primary" class="py-0">
               <v-btn
                 v-if="post_category"
                 class="small pa-0 font-weight-bold"
@@ -18,7 +18,12 @@
               >
               </v-btn>
             </v-col>
-            <v-col cols="auto" class="pl-0 pl-sm-2 black--text text-subtitle-2">
+            <v-col cols="auto" class="pl-0 pl-sm-2 black--text text-subtitle-2 py-0">
+              <span>
+                Author: {{post_author.name}}
+              </span>
+            </v-col>
+            <v-col cols="auto" class="pl-0 pl-sm-2 black--text text-subtitle-2 py-0">
               <span class="d-none d-sm-block">Updated: {{ new Date(post.modified).toLocaleDateString("en-US", {
                   year: 'numeric', month: 'long', day: 'numeric'
                 })
@@ -31,12 +36,12 @@
                 }}
               </span>
             </v-col>
-            <v-col cols="auto" class="pl-0 pl-sm-2 black--text text-subtitle-2 d-flex">
+            <v-col cols="auto" class="pl-sm-2 black--text text-subtitle-2 d-flex py-0">
                <v-icon small color="grey lighten-1">mdi-clock</v-icon>
                <span class="d-none d-sm-block px-1">Reading time:</span>
               <read-time :text="post.content.rendered" :no_icon="true"/>
             </v-col>
-            <v-col order="4" cols class="text-right pl-0" style="text-decoration: none">
+            <v-col order="4" cols class="text-right pl-0 py-0" style="text-decoration: none">
               <ShareNetwork
                 network="facebook"
                 :url="currentURL"
@@ -73,10 +78,7 @@
         </v-col>
       </v-row>
       <v-row class="pt-5 "  v-if="post" no-gutters >
-        <v-col cols="12" md="4" class="pt-0 pb-md-10">
-          <author-card :author="post_author" />
-        </v-col>
-        <v-col cols="12" md="8" class="pt-3 pt-md-0 pb-10">
+        <v-col cols="12" class="pt-3 pt-md-0 pb-10">
           <post-list :posts="category_posts" :title="'Related Posts'"/>
         </v-col>
       </v-row>
@@ -120,7 +122,7 @@ export default {
     }
   },
   head(){
-    const title = `${this.post.title.rendered} - ${this.$store.state.config.site_title}`;
+    const title = `${this.$store.state.config.site_title} | ${this.post.title.rendered}`;
     const description = this.post.excerpt.rendered;
     return this.$seo(title, description, this.$route.path, [
       { hid: 'og:image', name: 'og:image', content: `https:${this.post.yoast_head_json['og_image'][0].url}` },

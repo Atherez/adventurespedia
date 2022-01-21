@@ -94,3 +94,17 @@
       </v-row>
     </v-container>
 </template>
+
+<script>
+export default {
+  components: {
+  },
+  computed: {
+  },
+  head(){
+    const title = `${this.$store.state.config.site_title} | Terms and Conditions`;
+    const description = 'Terms and Conditions | Terms of Use'
+    return this.$seo(title, description, this.$route.path);
+  },
+}
+</script>
