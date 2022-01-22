@@ -21,7 +21,7 @@
             <v-col cols="auto" class="pl-0 pl-sm-2 black--text text-subtitle-2 py-0">
               <span>
                 Author:
-                <a :href="`/author/${post_author.slug}`" class="black--text" style="text-decoration: none;">
+                <a :href="`/author/${post_author.slug}`"  style="text-decoration: none;">
                   {{post_author.name}}
                 </a>
               </span>
@@ -88,14 +88,14 @@
                 <v-icon color="blue">mdi-linkedin</v-icon>
               </ShareNetwork>
               <ShareNetwork
-                network="email"
+                network="pinterest"
                 :url="currentURL"
                 :title="format(post.title.rendered)"
                 :description="format(post.excerpt.rendered)"
                 :quote="format(post.title.rendered)"
                 class="ml-1"
               >
-                <v-icon color="red">mdi-email</v-icon>
+                <v-icon color="red">mdi-pinterest</v-icon>
               </ShareNetwork>
               </div>
               </div>

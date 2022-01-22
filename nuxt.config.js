@@ -21,12 +21,12 @@ export default {
       {
         hid: 'title',
         name: 'title',
-        content: `Swati's Blog`,
+        content: 'AdventuresPedia'
       },
       {
         hid: 'apple-mobile-web-app-title',
         name: 'apple-mobile-web-app-title',
-        content: `Swati's Blog`,
+        content: 'AdventuresPedia',
       },
       {
         hid: 'description',
@@ -58,7 +58,7 @@ export default {
       {
         hid: 'og:site_name',
         name: 'og:site_name',
-        content: `Swati's Blog`,
+        content: 'AdventuresPedia'
       },
       {
         hid: 'og:type',
