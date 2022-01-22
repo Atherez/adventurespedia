@@ -101,8 +101,7 @@
               </div>
             </v-col>
             <v-col cols="12" order="4" order-sm="5">
-              <v-img
-                class="mt-md-6"
+              <img
                 width="100%"
                 v-if="post.jetpack_featured_media_url"
                 :src="post.jetpack_featured_media_url"/>
