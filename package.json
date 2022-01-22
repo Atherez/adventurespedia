@@ -18,6 +18,7 @@
     "core-js": "3.15.1",
     "express": "4.17.2",
     "nuxt": "2.15.7",
+    "nuxt-mail": "3.0.18",
     "vue-social-sharing": "3.0.8",
     "vuetify": "2.5.5"
   },

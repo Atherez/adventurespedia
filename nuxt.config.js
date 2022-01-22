@@ -122,6 +122,19 @@ export default {
     '@nuxtjs/pwa',
     'vue-social-sharing/nuxt',
     '@nuxtjs/sitemap',
+    ['nuxt-mail', {
+      message: {
+        to: 'contact@adventurespedia.com',
+      },
+      smtp: {
+        host: 'smtpout.secureserver.net',
+        port: 465,
+        auth: {
+          user: process.env.SMTP_USER,
+          pass: process.env.SMTP_PASS
+        },
+      },
+    }],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -199,3 +212,4 @@ export default {
     generate: false,
   },
 }
+
