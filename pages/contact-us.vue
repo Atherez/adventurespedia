@@ -117,11 +117,16 @@ export default {
       this.snackbar_text = 'Thank You for reaching out to us!'
       }catch(err){
        this.snackbar_text = 'Failed to send email! Write to us at contact@adventurespedia.com'
-
       }finally{
         this.snackbar= true;
         this.processing = false;
+        this.clearForm()
       }
+    },
+    clearForm(){
+      this.email = '';
+      this.message = '';
+      this.name = '';
     }
   },
   head(){

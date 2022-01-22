@@ -10,8 +10,8 @@
         <client-only>
           <v-img
             :height="imageHeight"
-            v-if="post.yoast_head_json['og_image'] && post.yoast_head_json['og_image'][0]"
-            :src="post.yoast_head_json['og_image'][0].url"
+            v-if="post.jetpack_featured_media_url"
+            :src="post.jetpack_featured_media_url"
           >
             <v-btn
               class="ma-2 p-0 white--text font-weight-bold small"

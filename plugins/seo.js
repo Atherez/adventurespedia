@@ -1,13 +1,17 @@
+import htmlToFormattedText from "html-to-formatted-text";
+
 export default ({ app }, inject) => {
   inject('seo', function(
-    title,
-    description,
+    t,
+    desc,
     canonical,
     metaTags
   ) {
     const baseUrl = app.store.state.config.site_url;
     const link = [{ rel: 'canonical', href: `${baseUrl}${canonical}` }];
     const image_url = app.store.state.config.site_logo
+    let title = htmlToFormattedText(t);
+    let description = htmlToFormattedText(desc);
     return {
       title,
       link,

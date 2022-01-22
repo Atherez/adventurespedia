@@ -11,8 +11,8 @@
       <v-col cols="5" class="pa-0">
         <v-img
           height="100%"
-          v-if="post.yoast_head_json['og_image'] && post.yoast_head_json['og_image'][0]"
-          :src="post.yoast_head_json['og_image'][0].url"
+          v-if="post.jetpack_featured_media_url"
+          :src="post.jetpack_featured_media_url"
         >
           <v-btn
             v-if="post_category"
