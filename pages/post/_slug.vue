@@ -211,6 +211,15 @@ export default {
   .share-network-twitter{
     text-decoration: none !important;
   }
+  .share-network-whatsapp{
+    text-decoration: none !important;
+  }
+  .share-network-linkedin{
+    text-decoration: none !important;
+  }
+  .share-network-pinterest{
+    text-decoration: none !important;
+  }
   img{
     max-width: 100%
   }
