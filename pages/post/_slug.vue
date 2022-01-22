@@ -44,33 +44,70 @@
                <span class="d-none d-sm-block px-1">Reading time:</span>
               <read-time :text="post.content.rendered" :no_icon="true"/>
             </v-col> -->
-            <v-col order="4" cols class="text-right pl-0 py-0" style="text-decoration: none">
+            <v-col order="5" order-sm="4" cols class="text-left text-sm-right pl-sm-0 py-0" style="text-decoration: none">
+              <div class="d-flex align-items-center d-sm-block">
+              <div class="d-block d-sm-none text-overline pr-2"> Share : </div>
+              <div>
               <ShareNetwork
                 network="facebook"
                 :url="currentURL"
-                :title="post.title.rendered"
-                :description="post.excerpt.rendered"
-                :quote="post.excerpt.rendered"
+                :title="format(post.title.rendered)"
+                :description="format(post.excerpt.rendered)"
+                :quote="format(post.title.rendered)"
               >
                 <v-icon color="blue">mdi-facebook</v-icon>
               </ShareNetwork>
               <ShareNetwork
                 network="twitter"
                 :url="currentURL"
-                :title="post.title.rendered"
-                :description="post.excerpt.rendered"
-                :quote="post.excerpt.rendered"
+                :title="format(post.title.rendered)"
+                :description="format(post.excerpt.rendered)"
+                :quote="format(post.title.rendered)"
                 class="ml-1"
               >
                 <v-icon color="info">mdi-twitter</v-icon>
               </ShareNetwork>
+              <ShareNetwork
+                network="whatsapp"
+                :url="currentURL"
+                :title="format(post.title.rendered)"
+                :description="format(post.excerpt.rendered)"
+                :quote="format(post.title.rendered)"
+                class="ml-1"
+              >
+                <v-icon color="green">mdi-whatsapp</v-icon>
+              </ShareNetwork>
+              <ShareNetwork
+                network="linkedin"
+                :url="currentURL"
+                :title="format(post.title.rendered)"
+                :description="format(post.excerpt.rendered)"
+                :quote="format(post.title.rendered)"
+                class="ml-1"
+              >
+                <v-icon color="blue">mdi-linkedin</v-icon>
+              </ShareNetwork>
+              <ShareNetwork
+                network="email"
+                :url="currentURL"
+                :title="format(post.title.rendered)"
+                :description="format(post.excerpt.rendered)"
+                :quote="format(post.title.rendered)"
+                class="ml-1"
+              >
+                <v-icon color="red">mdi-email</v-icon>
+              </ShareNetwork>
+              </div>
+              </div>
+            </v-col>
+            <v-col cols="12" order="4" order-sm="5">
+              <v-img
+                class="mt-md-6"
+                width="100%"
+                v-if="post.jetpack_featured_media_url"
+                :src="post.jetpack_featured_media_url"/>
             </v-col>
           </v-row>
-          <v-img
-            class="mt-6"
-            width="100%"
-            v-if="post.jetpack_featured_media_url"
-            :src="post.jetpack_featured_media_url"/>
         </v-col>
         <v-col cols="12" v-html="post.content.rendered">
         </v-col>
@@ -95,6 +132,7 @@ import Loader from "@/components/Loader";
 import ReadTime from '@/components/ReadTime.vue';
 import PostList from '@/components/PostsList.vue';
 import AuthorCard from '@/components/AuthorCard.vue';
+import htmlToFormattedText from "html-to-formatted-text";
 
 export default {
   components: {
@@ -102,6 +140,11 @@ export default {
     ReadTime,
     PostList,
     AuthorCard,
+  },
+  methods:{
+    format(html){
+      return htmlToFormattedText(html);
+    }
   },
   computed: {
     categories () {
