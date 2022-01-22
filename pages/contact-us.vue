@@ -40,7 +40,7 @@
                 <v-btn
                   color="primary"
                   @click="submit"
-                  :disabled="!valid"
+                  :disabled="!valid || processing"
                 >submit</v-btn>
             </v-form>
             </v-container>
@@ -49,6 +49,22 @@
       </v-row>
       </client-only>
     </v-container>
+     <v-snackbar
+      v-model="snackbar"
+    >
+      {{ snackbar_text }}
+
+      <template v-slot:action="{ attrs }">
+        <v-btn
+          color="pink"
+          text
+          v-bind="attrs"
+          @click="snackbar = false"
+        >
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar>
   </div>
 </template>
 <script>
@@ -68,6 +84,9 @@ export default {
   },
   data() {
     return {
+      processing: false,
+      snackbar: false,
+      snackbar_text: '',
       name: '',
       nameRules: [
           (v) => !!v || 'Name is required',
@@ -88,13 +107,20 @@ export default {
   methods:{
     async submit(){
       try{
+      this.processing = true;
+      this.snackbar = false;
       await this.$mail.send({
         from: this.email,
         subject: `Contact Form | ${this.name}` ,
         text: this.message,
       })
+      this.snackbar_text = 'Thank You for reaching out to us!'
       }catch(err){
-        console.log(err)
+       this.snackbar_text = 'Failed to send email! Write to us at contact@adventurespedia.com'
+
+      }finally{
+        this.snackbar= true;
+        this.processing = false;
       }
     }
   },

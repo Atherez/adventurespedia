@@ -69,8 +69,8 @@
           <v-img
             class="mt-6"
             width="100%"
-            v-if="post.yoast_head_json['og_image'] && post.yoast_head_json['og_image'][0]"
-            :src="post.yoast_head_json['og_image'][0].url"/>
+            v-if="post.jetpack_featured_media_url"
+            :src="post.jetpack_featured_media_url"/>
         </v-col>
         <v-col cols="12" v-html="post.content.rendered">
         </v-col>
@@ -145,8 +145,9 @@ export default {
       });
     if(!response || !response.data || !response.data.length)
       throw 'Not Found';
+    const post  = response.data[0];
     return {
-      post: response.data[0]
+      post:post
     }
     }catch(err){
       return error({statusCode: 404, message: 'not found'});
@@ -167,6 +168,9 @@ export default {
   }
   .share-network-twitter{
     text-decoration: none !important;
+  }
+  img{
+    max-width: 100%
   }
 }
 </style>
