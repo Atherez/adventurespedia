@@ -77,6 +77,11 @@
     <v-navigation-drawer v-model="drawer" :right="true" temporary fixed class="grey darken-4 darken-4">
       <div class="fill-height d-flex flex-column justify-space-between">
         <v-list>
+          <v-list-item link :href="'/'">
+             <v-list-item-content class="py-0 white--text font-weight-bold text-button">
+               Home
+             </v-list-item-content >
+          </v-list-item>
           <v-list-item
             v-for="(item, i) in menu_items"
             :key="i"
@@ -124,7 +129,7 @@
           </v-list-item>
         </v-list>
         <div class="px-4 pb-4">
-          <v-btn id="callback-topnav" color="primary" block href="#join-newsletter">
+          <v-btn id="callback-topnav" color="primary" block :href="$store.state.config.mailchimp_form">
             Join Newsletter
           </v-btn>
         </div>
