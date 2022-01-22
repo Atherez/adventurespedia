@@ -40,6 +40,7 @@ export const actions = {
     response = await axios.get(`${rootState.config.wp_url}/wp-json/wp/v2/posts`, {
       params:{
         per_page: 3,
+        orderBy: 'relevance'
       }
     });
 

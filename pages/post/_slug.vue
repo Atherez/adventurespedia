@@ -20,7 +20,10 @@
             </v-col>
             <v-col cols="auto" class="pl-0 pl-sm-2 black--text text-subtitle-2 py-0">
               <span>
-                Author: {{post_author.name}}
+                Author:
+                <a :href="`/author/${post_author.slug}`" class="black--text" style="text-decoration: none;">
+                  {{post_author.name}}
+                </a>
               </span>
             </v-col>
             <v-col cols="auto" class="pl-0 pl-sm-2 black--text text-subtitle-2 py-0">
