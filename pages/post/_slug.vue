@@ -121,6 +121,11 @@
           <post-list :posts="category_posts" :title="'Related Posts'"/>
         </v-col>
       </v-row>
+      <v-row>
+        <v-col cols="12">
+          <adsbygoogle />
+        </v-col>
+      </v-row>
     </v-container>
   </div>
 </template>

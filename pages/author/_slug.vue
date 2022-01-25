@@ -53,6 +53,11 @@
           </div>
         </v-col>
       </v-row>
+      <v-row>
+        <v-col cols="12">
+          <adsbygoogle />
+        </v-col>
+      </v-row>
     </v-container>
   </div>
 </template>
