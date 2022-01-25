@@ -144,7 +144,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: process.env.BASE_URL || 'localhost:3000',
+    baseURL: process.env.BASE_URL || 'http://localhost:3000',
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -183,7 +183,7 @@ export default {
   sitemap: {
     routes: async () => {
       // Initiate axios
-      const wp_url = 'https://blog.adventurespedia.com'
+      const wp_url = 'https://blog.adventurespedia.com';
       const routes = ['/about', '/privacy-policy', '/terms-and-conditions', '/contact-us', '/',];
 
       // all the posts
