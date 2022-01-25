@@ -136,6 +136,9 @@ export default {
     }],
     ['@nuxtjs/google-analytics', {
       id: process.env.GA_ID || ''
+    }],
+    ['@nuxtjs/google-adsense', {
+      id: process.env.AD_ID || ''
     }]
   ],
 
