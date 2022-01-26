@@ -102,6 +102,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/seo',
+    { src: '~/plugins/vee-validate', ssr: false },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -214,5 +215,9 @@ export default {
     gzip: true,
     generate: false,
   },
+
+  serverMiddleware: [
+    '~/api/index.js',
+  ]
 }
 

@@ -22,8 +22,10 @@
     "core-js": "3.15.1",
     "express": "4.17.2",
     "html-to-formatted-text": "2.7.0",
+    "mailchimp-api-v3": "1.15.0",
     "nuxt": "2.15.7",
     "nuxt-mail": "3.0.18",
+    "vee-validate": "3.4.14",
     "vue-social-sharing": "3.0.8",
     "vuetify": "2.5.5"
   },

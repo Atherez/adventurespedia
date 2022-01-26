@@ -57,7 +57,7 @@
           </v-col>
           <v-col cols="auto">
             <div class="d-none d-md-block">
-              <v-btn color="primary" depressed class="text--white" :href="$store.state.config.mailchimp_form">
+              <v-btn color="primary" depressed class="text--white" href="#join-newsletter">
                 Join Newsletter
               </v-btn>
             </div>
@@ -129,7 +129,7 @@
           </v-list-item>
         </v-list>
         <div class="px-4 pb-4">
-          <v-btn id="callback-topnav" color="primary" block :href="$store.state.config.mailchimp_form">
+          <v-btn id="callback-topnav" color="primary" block :href="$store.state.config.mailchimp_form" target="_blank">
             Join Newsletter
           </v-btn>
         </div>
@@ -171,27 +171,50 @@
           <div class="text-subtitle-2 grey--text">
             WANT TO GET LATEST UPDATES WHENEVER WE POST A NEW BLOG?
           </div>
-          <div class="d-flex align-items-center mt-2" id="join-newsletter">
-            <div class="flex-grow-1">
-              <v-text-field
-                label="Your email"
-                solo
-                dark
-                hide-details
-                type="email"
-                flat
-                dense
+          <div>
+      <validation-observer
+      v-slot="{ invalid }"
+      ref="subscribe"
+      tag="form"
+      @submit.prevent="!invalid && subscribe()">
+      <v-container fluid class="pl-0 pb-0">
+        <v-row align="center" no-gutters>
+          <v-col cols>
+            <validation-provider
+              rules="required|email"
+              :bails="false"
+              tag="div"
+              name="Email"
+              v-slot="{ errors }"
               >
-              </v-text-field>
-            </div>
-            <div class="px-2">
-              <v-btn color="primary" :href="$store.state.config.mailchimp_form">
+
+              <v-text-field
+                  id="join-newsletter"
+                  label="Your email"
+                  solo
+                  dark
+                  hide-details
+                  type="email"
+                  flat
+                  dense
+                  v-model="form.email"
+                >
+                </v-text-field>
+            </validation-provider>
+          </v-col>
+          <v-col cols="12" sm="auto">
+            <div class="pt-2 pl-0 pl-sm-2 pt-sm-0 pr-2">
+                <v-btn color="primary" type="submit" :disabled="invalid || processing">
                 Join Newsletter
-              </v-btn>
+                </v-btn>
             </div>
-          </div>
-          <div class="mt-2 text-subtitle-2 grey--text">
-            By clicking you agree to <a class="text-subtitle-2" href="/privacy-policy">The Privacy Policy </a>
+          </v-col>
+        </v-row>
+      </v-container>
+      <div class="mt-2 text-subtitle-2 grey--text">
+        By clicking you agree to <a class="text-subtitle-2" href="/privacy-policy">The Privacy Policy </a>
+      </div>
+    </validation-observer>
           </div>
       </v-col>
       <v-col
@@ -201,12 +224,29 @@
         <span>&copy; {{ new Date().getFullYear() }}</span> — AdventuresPedia
       </v-col>
     </v-row>
+     <v-snackbar
+      v-model="snackbar"
+    >
+      {{ snackbar_text }}
+
+      <template v-slot:action="{ attrs }">
+        <v-btn
+          color="pink"
+          text
+          v-bind="attrs"
+          @click="snackbar = false"
+        >
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar>
   </v-footer>
 </template>
   </v-app>
 </template>
 
 <script>
+import axios from "axios";
 export default {
   computed: {
     menu_items () {
@@ -224,6 +264,14 @@ export default {
       drawer: false,
       fixed: false,
       title: 'Vuetify.js',
+      form: {
+        email: ''
+      },
+      cachedForm: {},
+      invalid: false,
+      snackbar_text: '',
+      processing: false,
+      snackbar: false
     };
   },
   watch: {
@@ -231,6 +279,25 @@ export default {
   async created() {
   },
   methods: {
+    async subscribe(event){
+      const formData = {...this.form}
+      try{
+        this.processing = true;
+        this.snackbar = false;
+        const {data} = await axios.post('/api/subscribe', formData)
+        this.snackbar_text = `Thanks, ${data.email_address} is subscribed!`
+        this.form = {...this.cachedForm}
+        this.$refs.subscribe.reset()
+      }catch(e){
+        this.snackbar_text = 'Failed to subscribe! User already in list.'
+      }finally{
+        this.snackbar= true;
+        this.processing = false;
+      }
+    }
   },
+  mounted(){
+    this.cachedForm = {...this.form}
+  }
 };
 </script>
