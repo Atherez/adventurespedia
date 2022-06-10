@@ -214,6 +214,7 @@ export default {
     path: '/sitemap.xml',
     gzip: true,
     generate: false,
+    hostname: 'https://adventurespedia.com'
   },
 
   serverMiddleware: [
