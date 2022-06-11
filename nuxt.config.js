@@ -214,6 +214,9 @@ export default {
     path: '/sitemap.xml',
     gzip: true,
     generate: false,
+    server:{
+      host: '0.0.0.0'
+    }
   },
 
   serverMiddleware: [
