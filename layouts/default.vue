@@ -221,6 +221,9 @@
         class="py-4 text-center grey--text"
         cols="12"
       >
+      <div>
+            AdventuresPedia is reader-supported. When you buy through links on our site, we may earn an affiliate commission.
+          </div>
         <span>&copy; {{ new Date().getFullYear() }}</span> — AdventuresPedia
       </v-col>
     </v-row>

@@ -9,7 +9,7 @@
          <v-col cols="12" class="text-center text-body-2">
            <span class="font-weight-bold">Questions, bug reports, feedback, feature-requests - we're here for it all.</span>
            <br />
-           We'd like to hear from you, write to us in the below form.
+           We'd like to hear from you; write to us in the form below.
         </v-col>
         <v-col cols="12" md="7">
           <v-card>

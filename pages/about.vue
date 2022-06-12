@@ -6,11 +6,14 @@
         <v-col cols="12" class="text-center text-h5 pb-0 primary--text font-weight-bold">
           About Us
         </v-col>
-         <v-col cols="12" md="8" class="text-center">
-           AdventuresPedia is a thoughtfully-created informative website for all things traveling - from <span class="primary--text">visas, passports, and flights to looming volcanoes and scenic beaches</span> - we cover it all. As your ‘virtual’ backpacking companions, we, at AdventuresPedia, aim to bring you meticulously accurate and relevant content on hotels, flights, city recommendations, and travel FAQs and inspirations.
+        <v-col cols="12" md="8" class="text-center">
+            AdventuresPedia is a one-stop solution for every traveling question that you have. We bring thoughtfully-curated, meticulously-crafted, deeply-researched, and factually correct content on everything synonymous to traveling. From <span class="primary--text">Visas & Passports</span>, to <span class="primary--text">Travel Destinations</span>, <span class="primary--text">Hotels</span>, and <span class="primary--text">Flights</span>, we cover it all!
             <br/>
             <br />
-We are a team of adrenaline-seeking adventure enthusiasts with a passion for blogging and sharing our knowledge with the world. Our team is devoted to constantly foraging for brain-racking questions related to travel and providing the most accurate and relevant information on the same, to our dedicated readers and visitors.
+            We at AdventuresPedia, are a team of travel enthusiasts with a deep passion for blogging and providing our readers with answers to brain-racking questions related to traveling. 
+            <br />
+            <br />
+            When not blogging, we make impulsive trekking decisions and explore places that are largely untouched and undiscovered!    
         </v-col>
         <v-col cols="12" class="text-center text-h5 pb-0 primary--text font-weight-bold">
           Affiliate Disclosure
