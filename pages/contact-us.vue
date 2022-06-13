@@ -116,6 +116,7 @@ export default {
       })
       this.snackbar_text = 'Thank You for reaching out to us!'
       }catch(err){
+        console.log(err);
        this.snackbar_text = 'Failed to send email! Write to us at contact@adventurespedia.com'
       }finally{
         this.snackbar= true;

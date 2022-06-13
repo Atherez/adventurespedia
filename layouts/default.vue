@@ -204,7 +204,7 @@
           </v-col>
           <v-col cols="12" sm="auto">
             <div class="pt-2 pl-0 pl-sm-2 pt-sm-0 pr-2">
-                <v-btn color="primary" type="submit" :disabled="invalid || processing">
+                <v-btn color="primary" type="submit" :disabled="invalid || processing" :href="$store.state.config.mailchimp_form" target="_blank">
                 Join Newsletter
                 </v-btn>
             </div>
