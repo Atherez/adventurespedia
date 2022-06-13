@@ -220,7 +220,7 @@ export default {
     }
   },
   robots: {
-      UserAgent: 'Googlebot',
+      UserAgent: '*',
       Sitemap: (req) => `https://www.adventurespedia.com/sitemap.xml`
   },
   serverMiddleware: [
