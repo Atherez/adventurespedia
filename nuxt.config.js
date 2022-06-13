@@ -122,6 +122,7 @@ export default {
     '@nuxtjs/pwa',
     'vue-social-sharing/nuxt',
     '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
     ['nuxt-mail', {
       message: {
         to: 'contact@adventurespedia.com',
@@ -218,7 +219,10 @@ export default {
       host: '0.0.0.0'
     }
   },
-
+  robots: {
+      UserAgent: 'Googlebot',
+      Sitemap: (req) => `https://www.adventurespedia.com/sitemap.xml`
+  },
   serverMiddleware: [
     '~/api/index.js',
   ]
