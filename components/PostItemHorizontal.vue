@@ -39,11 +39,10 @@
           </div> -->
         </v-card-text>
 
-        <v-card-title class="post-title pt-1 pb-0">{{ post.title.rendered }}</v-card-title>
+        <v-card-title class="post-title pt-1 pb-0"><div v-html="post.title.rendered"></div></v-card-title>
 
         <v-card-text class="post-excerpt pt-1">
-          <div>
-            This year, there are so many great Black Friday deals. So, hurry up and share them with your audience!
+          <div v-html="post.excerpt.rendered">
           </div>
         </v-card-text>
 

@@ -20,8 +20,7 @@
             </v-col>
             <v-col cols="auto" class="pl-0 pl-sm-2 black--text text-subtitle-2 py-0">
               <span>
-                Author:
-                <a :href="`/author/${post_author.slug}`"  style="text-decoration: none;">
+                Author: <a :href="`/author/${post_author.slug}`"  style="text-decoration: none;">
                   {{post_author.name}}
                 </a>
               </span>
@@ -227,6 +226,12 @@ export default {
   }
   img{
     max-width: 100%
+  }
+  .is-style-regular{
+  }
+  .is-style-regular td{
+    padding: 5px;
+    border: 1px solid black;
   }
 }
 </style>

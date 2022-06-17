@@ -18,14 +18,6 @@
         </v-col>
          <v-col cols="12" class="text-center text-button py-0">
           {{ current_author.name}}
-          <span v-if="current_author.yoast_head_json.schema['@graph'].filter(s=> s['@type'] == 'Person').length">
-            <a
-              :href="current_author.yoast_head_json.schema['@graph'].filter(s=> s['@type'] == 'Person')[0].sameAs[0]"
-              target="_blank"
-              >
-              <v-icon color="blue">mdi-linkedin</v-icon>
-            </a>
-          </span>
         </v-col>
          <v-col cols="12" md="6" class="text-center text-body-2 pt-0">
           {{ current_author.description}}
