@@ -233,5 +233,9 @@ export default {
     padding: 5px;
     border: 1px solid black;
   }
+  .wp-block-image{
+    text-align: center;
+  }
+
 }
 </style>
