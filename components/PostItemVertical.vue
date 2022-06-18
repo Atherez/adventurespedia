@@ -71,8 +71,8 @@ export default {
           case 'xs': return '185px'
           case 'sm': return '185px'
           case 'md': return '240px'
-          case 'lg': return '200px'
-          case 'xl': return '200px'
+          case 'lg': return '240px'
+          case 'xl': return '240px'
         }
       },
       categories () {
