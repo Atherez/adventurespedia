@@ -12,12 +12,10 @@
           <v-icon small color="blue" class="smaller">
             mdi-circle
           </v-icon>
-          <div class="pl-2 title-small">
-            {{ post.title.rendered }}
+          <div class="pl-2 title-small" v-html="post.title.rendered">
           </div>
         </div>
-        <div class="px-1">
-          This year, there are so many great Black Friday deals. So, hurry up and share them with your audience!
+        <div class="px-1" v-html="post.excerpt.rendered">
         </div>
       </a>
       <v-divider v-if="index != (posts.length - 1)" class="mb-0 mt-4 py-0"></v-divider>
