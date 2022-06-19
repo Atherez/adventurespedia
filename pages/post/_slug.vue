@@ -238,15 +238,13 @@ export default {
     padding: 5px;
     border: 1px solid black;
   }
-  .wp-block-image{
+  figure{
+    margin: auto;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  .wp-block-image{
-    margin: auto;
   }
   .img-responsive{
     max-width: 100%; 
