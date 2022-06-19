@@ -309,7 +309,7 @@ export default {
    font-family: "Merriweather" !important;
    line-height: 2.0;
 }
-header{
+header, footer{
   font-family: "Roboto" !important;
 }
 </style>

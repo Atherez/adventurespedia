@@ -15,8 +15,6 @@
           <div class="pl-2 title-small" v-html="post.title.rendered">
           </div>
         </div>
-        <div class="px-1" v-html="post.excerpt.rendered">
-        </div>
       </a>
       <v-divider v-if="index != (posts.length - 1)" class="mb-0 mt-4 py-0"></v-divider>
     </v-card-text>
