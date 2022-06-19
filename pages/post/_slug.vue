@@ -236,6 +236,10 @@ export default {
   .wp-block-image{
     text-align: center;
   }
-
+  .img-responsive{
+    max-width: 100%; 
+    display: block; 
+    height: auto;
+  }
 }
 </style>
