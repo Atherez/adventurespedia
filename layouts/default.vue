@@ -304,3 +304,12 @@ export default {
   }
 };
 </script>
+<style>
+#app {
+   font-family: "Merriweather" !important;
+   line-height: 2.0;
+}
+header{
+  font-family: "Roboto" !important;
+}
+</style>
