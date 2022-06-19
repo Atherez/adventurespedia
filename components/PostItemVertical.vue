@@ -6,7 +6,7 @@
     v-if="post"
     :href="`/post/${post.slug}`"
   >
-    <div :style="`min-height:${imageHeight}`">
+    <div :style="`min-height:${imageHeight};`">
         <client-only>
           <v-img
             :height="imageHeight"
@@ -39,7 +39,10 @@
     </v-card-text>
 
     <v-card-title class="post-title pt-1 pb-0">
-    <div v-html="post.title.rendered">
+    <div 
+      style="word-break: keep-all;"
+      v-html="post.title.rendered"
+    >
     </div>
     </v-card-title>
 

@@ -37,17 +37,14 @@
               </v-col>
             </v-row>
             <v-row>
-              <v-col cols="12" md="6" lg="3">
+              <v-col cols="12" md="6" lg="4">
                 <post-item-vertical v-if="posts.relevant_posts[0]" :post="posts.relevant_posts[0]"/>
               </v-col>
-              <v-col cols="12" md="6" lg="3">
+              <v-col cols="12" md="6" lg="4">
                 <post-item-vertical v-if="posts.relevant_posts[1]" :post="posts.relevant_posts[1]"/>
               </v-col>
-              <v-col cols="12" md="6" lg="3">
+              <v-col cols="12" md="6" lg="4">
                 <post-item-vertical v-if="posts.relevant_posts[2]" :post="posts.relevant_posts[2]"/>
-              </v-col>
-              <v-col cols="12" md="6" lg="3">
-                <post-item-vertical v-if="posts.relevant_posts[3]" :post="posts.relevant_posts[3]"/>
               </v-col>
             </v-row>
           </v-col>
@@ -68,17 +65,14 @@
                 </v-col>
               </v-row>
               <v-row v-if="posts.category_posts[category.id]">
-                <v-col cols="12" md="6" lg="3">
+                <v-col cols="12" md="6" lg="4">
                   <post-item-vertical v-if="posts.category_posts[category.id][0]" :post="posts.category_posts[category.id][0]"/>
                 </v-col>
-                <v-col cols="12" md="6" lg="3">
+                <v-col cols="12" md="6" lg="4">
                   <post-item-vertical v-if="posts.category_posts[category.id][1]" :post="posts.category_posts[category.id][1]"/>
                 </v-col>
-                <v-col cols="12" md="6" lg="3">
+                <v-col cols="12" md="6" lg="4">
                   <post-item-vertical v-if="posts.category_posts[category.id][2]" :post="posts.category_posts[category.id][2]"/>
-                </v-col>
-                <v-col cols="12" md="6" lg="3">
-                  <post-item-vertical v-if="posts.category_posts[category.id][3]" :post="posts.category_posts[category.id][3]"/>
                 </v-col>
               </v-row>
             </v-col>

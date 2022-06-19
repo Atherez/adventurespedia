@@ -53,7 +53,7 @@ export const actions = {
       const response = await axios.get(`${rootState.config.wp_url}/index.php/wp-json/wp/v2/posts`, {
         params: {
           categories:[category.id],
-          per_page: 4
+          per_page: 3
           }
       });
       if(response && response.data)

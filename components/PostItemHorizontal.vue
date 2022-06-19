@@ -39,7 +39,7 @@
           </div> -->
         </v-card-text>
 
-        <v-card-title class="post-title pt-1 pb-0"><div v-html="post.title.rendered"></div></v-card-title>
+        <v-card-title class="post-title pt-1 pb-0"><div style="word-break: keep-all;" v-html="post.title.rendered"></div></v-card-title>
 
         <v-card-text class="post-excerpt pt-1">
           <div v-html="post.excerpt.rendered">
