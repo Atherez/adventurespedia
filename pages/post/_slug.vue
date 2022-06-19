@@ -227,9 +227,14 @@ export default {
   img{
     max-width: 100%
   }
-  .is-style-regular{
+  table {
+  display: block;
+  height: auto;
+   max-width: 100%;
+   overflow: scroll;
   }
-  .is-style-regular td{
+  table td, th{
+    min-width: 150px;
     padding: 5px;
     border: 1px solid black;
   }
