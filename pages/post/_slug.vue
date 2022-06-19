@@ -240,6 +240,13 @@ export default {
   }
   .wp-block-image{
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .wp-block-image{
+    margin: auto;
   }
   .img-responsive{
     max-width: 100%; 
