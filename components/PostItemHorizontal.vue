@@ -41,12 +41,12 @@
 
         <v-card-title class="post-title pt-1 pb-0"><div style="word-break: keep-all;" v-html="post.title.rendered"></div></v-card-title>
 
-        <v-card-text class="post-excerpt pt-1 pb-0">
+        <v-card-text class="post-excerpt pt-1">
           <div v-html="post.excerpt.rendered">
           </div>
         </v-card-text>
 
-        <v-card-text class="pt-0">
+        <v-card-text class="pt-2">
           <a style="text-decoration: none;" class="primary--text font-weight-bold" :href="`/post/${post.slug}`"> READ MORE > </a>
         </v-card-text>
       </v-col>
