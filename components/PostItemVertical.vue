@@ -12,6 +12,7 @@
             :height="imageHeight"
             v-if="post.jetpack_featured_media_url"
             :src="post.jetpack_featured_media_url"
+            p
           >
             <v-btn
               class="ma-2 p-0 white--text font-weight-bold small"
@@ -105,5 +106,8 @@ export default {
 
 <style lang="scss">
 .vertical-post-item {
+  .v-image__image--cover {
+    background-position: left !important;
+  }
 }
 </style>
