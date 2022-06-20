@@ -10,8 +10,8 @@ export default ({ app }, inject) => {
     const baseUrl = app.store.state.config.site_url;
     const link = [{ rel: 'canonical', href: `${baseUrl}${canonical}` }];
     const image_url = app.store.state.config.site_logo
-    let title = htmlToFormattedText(t);
-    let description = htmlToFormattedText(desc);
+    let title = htmlToFormattedText(t.replace(/\&\#8217\;/g, "'"));
+    let description = htmlToFormattedText(desc.replace(/\&\#8217\;/g, "'"));
     return {
       title,
       link,
