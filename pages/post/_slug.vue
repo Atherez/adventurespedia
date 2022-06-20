@@ -247,6 +247,7 @@ export default {
     justify-content: center;
   }
   .img-responsive{
+    margin: auto;
     max-width: 100%; 
     display: block; 
     height: auto;

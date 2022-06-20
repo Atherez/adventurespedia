@@ -150,7 +150,7 @@ export default {
       id: process.env.GA_ID || ''
     }],
     ['@nuxtjs/google-adsense', {
-      id: process.env.AD_ID || ''
+      id: 'ca-pub-3421792765391771' || ''
     }]
   ],
 
