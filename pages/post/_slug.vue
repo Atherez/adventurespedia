@@ -175,7 +175,7 @@ export default {
     const description = this.post.excerpt.rendered;
     return this.$seo(title, description, this.$route.path, [
       { hid: 'og:image', name: 'og:image', content: this.post.jetpack_featured_media_url },
-      { hid: 'twitter:image', name: 'og:image', content: this.post.jetpack_featured_media_url },
+      { hid: 'twitter:image', name: 'twitter:image', content: this.post.jetpack_featured_media_url },
       { hid: 'og:type', name: 'og:type', content: 'article' },
     ]);
   },

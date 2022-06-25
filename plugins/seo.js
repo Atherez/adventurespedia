@@ -16,6 +16,7 @@ export default ({ app }, inject) => {
       title,
       link,
       meta: [
+        ...((metaTags && metaTags) || []),
         { hid: 'title', name: 'title', content: title },
         { hid: 'apple-mobile-web-app-title', name: 'apple-mobile-web-app-title', content: title },
         { hid: 'og:title', name: 'og:title', content: title },
@@ -25,7 +26,6 @@ export default ({ app }, inject) => {
         { hid: 'twitter:description', name: 'twitter:description', content: description },
         { hid: 'og:image', name: 'og:image', content: image_url },
         { hid: 'twitter:image', name: 'twitter:image', content: image_url },
-        ...((metaTags && metaTags) || []),
       ],
     };
   });
