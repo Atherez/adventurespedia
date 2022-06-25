@@ -174,8 +174,8 @@ export default {
     const title = `${this.$store.state.config.site_title} | ${this.post.title.rendered}`;
     const description = this.post.excerpt.rendered;
     return this.$seo(title, description, this.$route.path, [
-      { hid: 'og:image', name: 'og:image', content: `https:${this.post.yoast_head_json['og_image'][0].url}` },
-      { hid: 'twitter:image', name: 'og:image', content: `https:${this.post.yoast_head_json['og_image'][0].url}` },
+      { hid: 'og:image', name: 'og:image', content: this.post.jetpack_featured_media_url },
+      { hid: 'twitter:image', name: 'og:image', content: this.post.jetpack_featured_media_url },
       { hid: 'og:type', name: 'og:type', content: 'article' },
     ]);
   },
