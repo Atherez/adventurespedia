@@ -228,10 +228,11 @@ export default {
     max-width: 100%
   }
   table {
-  display: block;
-  height: auto;
-   max-width: 100%;
-   overflow: scroll;
+    display: block;
+    height: auto;
+    max-height: 500px;
+    max-width: 100%;
+    overflow: scroll;
   }
   table td, th{
     min-width: 150px;
