@@ -171,7 +171,7 @@ export default {
     }
   },
   head(){
-    const title = `${this.post.title.rendered} | ${this.$store.state.config.site_title}`;
+    const title = `${this.post.title.rendered} - ${this.$store.state.config.site_title}`;
     const description = this.post.excerpt.rendered;
     return this.$seo(title, description, this.$route.path, [
       { hid: 'og:image', name: 'og:image', content: this.post.jetpack_featured_media_url },
