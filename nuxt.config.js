@@ -239,20 +239,7 @@ export default {
   cache:{
     useHostPrefix: false,
     pages: [
-      // these are prefixes of pages that need to be cached
-      // if you want to cache all pages, just include '/'
-      '/about',
-      '/privacy-policy',
-      '/terms-and-conditions',
-      '/contact-us',
-      /^\/post\/*$/,
-      /^\/posts\/*$/,
- 
-      // you can also pass a regular expression to test a path
-      /^\/author\/*$/,
- 
-      // to cache only root route, use a regular expression
-      /^\/$/
+      '/'
     ],
     store: {
       type: 'memory',
