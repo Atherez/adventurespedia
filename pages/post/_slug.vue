@@ -200,11 +200,11 @@ export default {
    }
   },
   data(){
-    this.$store.dispatch('posts/init');
     return {currentURL: ''}
   },
   mounted() {
     this.currentURL = window ? window.location.href : '';
+    this.$store.dispatch('posts/init');
   }
 };
 </script>
