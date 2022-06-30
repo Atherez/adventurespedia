@@ -176,7 +176,7 @@
       v-slot="{ invalid }"
       ref="subscribe"
       tag="form"
-      @submit.prevent="!invalid && subscribe()">
+      @submit.prevent="!invalid">
       <v-container fluid class="pl-0 pb-0">
         <v-row align="center" no-gutters>
           <v-col cols>
@@ -282,22 +282,6 @@ export default {
   async created() {
   },
   methods: {
-    async subscribe(event){
-      const formData = {...this.form}
-      try{
-        this.processing = true;
-        this.snackbar = false;
-        const {data} = await axios.post('/api/subscribe', formData)
-        this.snackbar_text = `Thanks, ${data.email_address} is subscribed!`
-        this.form = {...this.cachedForm}
-        this.$refs.subscribe.reset()
-      }catch(e){
-        this.snackbar_text = 'Failed to subscribe! User already in list.'
-      }finally{
-        this.snackbar= true;
-        this.processing = false;
-      }
-    }
   },
   mounted(){
     this.cachedForm = {...this.form}

@@ -151,7 +151,8 @@ export default {
     }],
     ['@nuxtjs/google-adsense', {
       id: 'ca-pub-3421792765391771' || ''
-    }]
+    }],
+    'nuxt-ssr-cache'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -234,7 +235,36 @@ export default {
       Sitemap: (req) => `https://www.adventurespedia.com/sitemap.xml`
   },
   serverMiddleware: [
-    '~/api/index.js',
-  ]
+  ],
+  cache:{
+    useHostPrefix: false,
+    pages: [
+      // these are prefixes of pages that need to be cached
+      // if you want to cache all pages, just include '/'
+      '/about',
+      '/privacy-policy',
+      '/terms-and-conditions',
+      '/contact-us',
+      /^\/post\/*$/,
+      /^\/posts\/*$/,
+ 
+      // you can also pass a regular expression to test a path
+      /^\/author\/*$/,
+ 
+      // to cache only root route, use a regular expression
+      /^\/$/
+    ],
+    store: {
+      type: 'memory',
+ 
+      // maximum number of pages to store in memory
+      // if limit is reached, least recently used page
+      // is removed.
+      max: 100,
+ 
+      // number of seconds to store this page in cache
+      ttl: (3600),
+    },
+  }
 }
 
