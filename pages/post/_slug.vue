@@ -184,6 +184,8 @@ export default {
    try{
     if(!slug)
       throw 'Not Found';
+
+    await store.dispatch('posts/init');
     const response = await axios.get(`${store.state.config.wp_url}/wp-json/wp/v2/posts`, {
         params: {
           slug
@@ -192,6 +194,7 @@ export default {
     if(!response || !response.data || !response.data.length)
       throw 'Not Found';
     const post  = response.data[0];
+    
     return {
       post:post
     }
@@ -204,7 +207,6 @@ export default {
   },
   mounted() {
     this.currentURL = window ? window.location.href : '';
-    this.$store.dispatch('posts/init');
   }
 };
 </script>
