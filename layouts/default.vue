@@ -294,13 +294,31 @@ export default {
    font-size: 1.1em;
    line-height: 1.5;
 }
-h1,h2,h3,h4,h5,h6 {
-  font-family: "Pathway Gothic One", Arial !important;
+p {
+  margin: 25px auto auto auto !important;
+}
+h1,h2 {
+  font-family: "Arial", Arial !important;
   font-size: 2em;
   line-height: 1.5;
+  margin: 35px auto auto auto !important;
+}
+h3{
+  font-family: "Arial", Arial !important;
+  font-size: 1.5em;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 35px auto auto auto !important;
+}
+h4 {
+  font-family: "Arial", Arial !important;
+  font-size: 1.2em;
+  line-height: 1.5;
+  font-weight: normal;
+  margin: 35px auto auto auto !important;
 }
 .post-title {
-  font-family: "Pathway Gothic One", Arial !important;
+  font-family: Arial !important;
   font-size: 1.75em;
 }
 

@@ -194,7 +194,6 @@ export default {
     if(!response || !response.data || !response.data.length)
       throw 'Not Found';
     const post  = response.data[0];
-    
     return {
       post:post
     }
