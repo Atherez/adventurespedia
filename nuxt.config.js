@@ -92,14 +92,14 @@ export default {
         type: 'image/x-icon',
         href: '/favicon.ico?v=2',
       },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap'
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Merriweather&display=swap'
-      },
+      // {
+      //   rel: 'stylesheet',
+      //   href: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap'
+      // },
+      // {
+      //   rel: 'stylesheet',
+      //   href: 'https://fonts.googleapis.com/css2?family=Merriweather&display=swap'
+      // },
       {}
     ],
   },
