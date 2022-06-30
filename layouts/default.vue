@@ -306,7 +306,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .post-excerpt {
   font-family: "Nunito Sans", Arial !important;
-  font-size: 1.1em;
+  font-size: 0.9em !important;
   line-height: 1.5;
 }
 header, footer{
