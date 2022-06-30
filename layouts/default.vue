@@ -291,15 +291,23 @@ export default {
 <style>
 #app {
    font-family: "Nunito Sans", Arial;
+   font-size: 1.1em;
    line-height: 1.5;
 }
 h1,h2,h3,h4,h5,h6 {
   font-family: "Pathway Gothic One", Arial !important;
+  font-size: 2em;
   line-height: 1.5;
 }
 .post-title {
   font-family: "Pathway Gothic One", Arial !important;
   font-size: 1.75em;
+}
+
+.post-excerpt {
+  font-family: "Nunito Sans", Arial !important;
+  font-size: 1.1em;
+  line-height: 1.5;
 }
 header, footer{
   font-family: "Roboto" !important;
