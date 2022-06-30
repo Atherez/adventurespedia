@@ -27,64 +27,46 @@
       </v-container>
       </div>
       <div class="grey lighten-4 px-4 py-4 mb-0">
-      <v-container v-if="posts && posts.relevant_posts">
+      <v-container v-if="posts && posts.recent_posts">
         <v-row class="py-md-4">
           <v-col cols="12" md="12" class="px-0 pb-0">
             <v-row>
               <v-col>
-                <div class="section-title">Most relevant posts</div>
+                <div class="section-title">RECENT posts</div>
                 <v-divider class="mt-2"></v-divider>
               </v-col>
             </v-row>
             <v-row>
               <v-col cols="12" md="6" lg="4">
-                <post-item-vertical v-if="posts.relevant_posts[0]" :post="posts.relevant_posts[0]"/>
+                <post-item-vertical v-if="posts.recent_posts[3]" :post="posts.recent_posts[3]"/>
               </v-col>
               <v-col cols="12" md="6" lg="4">
-                <post-item-vertical v-if="posts.relevant_posts[1]" :post="posts.relevant_posts[1]"/>
+                <post-item-vertical v-if="posts.recent_posts[4]" :post="posts.recent_posts[4]"/>
               </v-col>
               <v-col cols="12" md="6" lg="4">
-                <post-item-vertical v-if="posts.relevant_posts[2]" :post="posts.relevant_posts[2]"/>
+                <post-item-vertical v-if="posts.recent_posts[5]" :post="posts.recent_posts[5]"/>
+              </v-col>
+              <v-col cols="12" md="6" lg="4">
+                <post-item-vertical v-if="posts.recent_posts[6]" :post="posts.recent_posts[6]"/>
+              </v-col>
+              <v-col cols="12" md="6" lg="4">
+                <post-item-vertical v-if="posts.recent_posts[7]" :post="posts.recent_posts[7]"/>
+              </v-col>
+              <v-col cols="12" md="6" lg="4">
+                <post-item-vertical v-if="posts.recent_posts[8]" :post="posts.recent_posts[8]"/>
+              </v-col>
+              <v-col cols="12" md="6" lg="4">
+                <post-item-vertical v-if="posts.recent_posts[9]" :post="posts.recent_posts[9]"/>
+              </v-col>
+              <v-col cols="12" md="6" lg="4">
+                <post-item-vertical v-if="posts.recent_posts[10]" :post="posts.recent_posts[10]"/>
+              </v-col>
+              <v-col cols="12" md="6" lg="4">
+                <post-item-vertical v-if="posts.recent_posts[11]" :post="posts.recent_posts[11]"/>
               </v-col>
             </v-row>
           </v-col>
         </v-row>
-        <div v-if="posts && posts.category_posts">
-          <v-row class="py-5" v-for="category of categories" :key="category.slug">
-            <v-col cols="12" md="12" class="px-0 pb-0">
-              <v-row>
-                <v-col>
-                  <div class="section-title d-flex justify-space-between" >
-                    <div v-html="category.name">
-                    </div>
-                    <a :href="`/posts/${category.slug}`" class="secondary--text" style="text-decoration: none;">
-                      SHOW ALL >
-                    </a>
-                  </div>
-                  <v-divider class="mt-2"></v-divider>
-                </v-col>
-              </v-row>
-              <v-row v-if="posts.category_posts[category.id]">
-                <v-col cols="12" md="6" lg="4">
-                  <post-item-vertical v-if="posts.category_posts[category.id][0]" :post="posts.category_posts[category.id][0]"/>
-                </v-col>
-                <v-col cols="12" md="6" lg="4">
-                  <post-item-vertical v-if="posts.category_posts[category.id][1]" :post="posts.category_posts[category.id][1]"/>
-                </v-col>
-                <v-col cols="12" md="6" lg="4">
-                  <post-item-vertical v-if="posts.category_posts[category.id][2]" :post="posts.category_posts[category.id][2]"/>
-                </v-col>
-              </v-row>
-            </v-col>
-          </v-row>
-          <v-row justify="center">
-            <v-col cols="auto">
-              <v-btn color="primary" href="/posts">
-                ALL POSTS
-              </v-btn>
-            </v-col>
-          </v-row>
-        </div>
       </v-container>
       </div>
     </div>

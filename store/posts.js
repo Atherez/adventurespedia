@@ -25,7 +25,7 @@ export const actions = {
     // Fetching recent posts
     let response = await axios.get(`${rootState.config.wp_url}/wp-json/wp/v2/posts`, {
       params:{
-        per_page: 3
+        per_page: 12
       }
     });
     let payload = {
@@ -35,30 +35,6 @@ export const actions = {
     }
     if(response && response.data)
       payload.recent_posts = response.data;
-
-    // Fetching relevant posts
-    response = await axios.get(`${rootState.config.wp_url}/wp-json/wp/v2/posts`, {
-      params:{
-        per_page: 3,
-        orderBy: 'relevance'
-      }
-    });
-
-    if(response && response.data)
-      payload.relevant_posts = response.data;
-
-    //Fetching all the categories and iterating over them
-    const categories = rootState.categories.items
-    for(const category of categories){
-      const response = await axios.get(`${rootState.config.wp_url}/index.php/wp-json/wp/v2/posts`, {
-        params: {
-          categories:[category.id],
-          per_page: 3
-          }
-      });
-      if(response && response.data)
-        payload.category_posts[category.id] = response.data
-    }
 
     commit('setData', payload)
   },
