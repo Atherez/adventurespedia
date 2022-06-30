@@ -117,7 +117,7 @@
       </v-row>
       <v-row class="pt-5 "  v-if="post" no-gutters >
         <v-col cols="12" class="pt-3 pt-md-0 pb-10">
-          <post-list :posts="category_posts" :title="'Related Posts'"/>
+          <post-list :posts="category_posts" :title="'Recent Posts'"/>
         </v-col>
       </v-row>
       <v-row>
@@ -161,8 +161,8 @@ export default {
       return this.categories.filter(c=> c.id == this.post.categories[0])[0]
     },
     category_posts(){
-      if(this.post_category && this.$store.state.posts.category_posts)
-        return this.$store.state.posts.category_posts[this.post_category.id].filter(p=> p.id != this.post.id)
+      if(this.post_category && this.$store.state.posts.recent_posts)
+        return this.$store.state.posts.recent_posts.filter(p=> p.id != this.post.id)
       return []
     },
     post_author(){
