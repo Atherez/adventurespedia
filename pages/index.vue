@@ -87,22 +87,17 @@ export default {
     PostItemHorizontal
   },
   computed: {
-    categories () {
-      return this.$store.state.categories.initialized ? this.$store.state.categories.items : []
-    },
     posts(){
       return this.$store.state.posts.initialized ? {
         recent_posts: this.$store.state.posts.recent_posts,
-        category_posts:  this.$store.state.posts.category_posts,
-        relevant_posts:  this.$store.state.posts.relevant_posts
         } : {}
     },
     loading(){
       return !this.$store.state.posts.initialized
     },
   },
-  data() {
-    return {}
+  async asyncData({store}) {
+    await store.dispatch('posts/init');
   },
   head(){
     const title = `${this.$store.state.config.site_title} | Home`;

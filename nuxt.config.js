@@ -92,14 +92,14 @@ export default {
         type: 'image/x-icon',
         href: '/favicon.ico?v=2',
       },
-      // {
-      //   rel: 'stylesheet',
-      //   href: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap'
-      // },
-      // {
-      //   rel: 'stylesheet',
-      //   href: 'https://fonts.googleapis.com/css2?family=Merriweather&display=swap'
-      // },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap'
+      },
       {}
     ],
   },
@@ -152,12 +152,6 @@ export default {
     ['@nuxtjs/google-adsense', {
       id: 'ca-pub-3421792765391771' || ''
     }],
-    ['@fengsi/nuxt-axios-cache', { 
-      /* module options */
-      cacheNodeTtl: 3600,
-      cacheNodeLimit: 300,
-      clearCacheRoutePath: '/_/nuxt-cache' // Clear cache route, request method is DELETE
-    }]
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

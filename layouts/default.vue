@@ -290,10 +290,18 @@ export default {
 </script>
 <style>
 #app {
-   /*font-family: "Merriweather" !important;*/
-   line-height: 2.0;
+   font-family: "Nunito Sans", Arial;
+   line-height: 1.5;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Pathway Gothic One", Arial !important;
+  line-height: 1.5;
+}
+.post-title {
+  font-family: "Pathway Gothic One", Arial !important;
+  font-size: 1.75em;
 }
 header, footer{
-  /*font-family: "Roboto" !important;*/
+  font-family: "Roboto" !important;
 }
 </style>

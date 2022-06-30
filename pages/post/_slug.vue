@@ -200,6 +200,7 @@ export default {
    }
   },
   data(){
+    this.$store.dispatch('posts/init');
     return {currentURL: ''}
   },
   mounted() {
