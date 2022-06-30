@@ -152,7 +152,12 @@ export default {
     ['@nuxtjs/google-adsense', {
       id: 'ca-pub-3421792765391771' || ''
     }],
-    'nuxt-ssr-cache'
+    ['@fengsi/nuxt-axios-cache', { 
+      /* module options */
+      cacheNodeTtl: 3600,
+      cacheNodeLimit: 300,
+      clearCacheRoutePath: '/_/nuxt-cache' // Clear cache route, request method is DELETE
+    }]
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -236,22 +241,5 @@ export default {
   },
   serverMiddleware: [
   ],
-  cache:{
-    useHostPrefix: false,
-    pages: [
-      '/'
-    ],
-    store: {
-      type: 'memory',
- 
-      // maximum number of pages to store in memory
-      // if limit is reached, least recently used page
-      // is removed.
-      max: 100,
- 
-      // number of seconds to store this page in cache
-      ttl: (3600),
-    },
-  }
 }
 

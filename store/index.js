@@ -6,6 +6,6 @@ export const actions = {
     await dispatch('categories/init');
     await dispatch('posts/init');
     await dispatch('authors/init');
-    await dispatch('tags/init');
+    //await dispatch('tags/init');
   },
 };
