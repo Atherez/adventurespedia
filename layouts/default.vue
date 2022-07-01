@@ -319,13 +319,16 @@ h4 {
 }
 .post-title {
   font-family: Arial !important;
-  font-size: 1.75em;
+  font-size: 1.75em !important;
 }
 
 .post-excerpt {
   font-family: "Nunito Sans", Arial !important;
   font-size: 0.9em !important;
-  line-height: 1.5;
+  line-height: 1.5 !important;
+}
+.post-excerpt p {
+  margin: 15px auto auto auto !important;
 }
 header, footer{
   font-family: "Roboto" !important;

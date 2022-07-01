@@ -9,7 +9,7 @@
                     happens to the best of us. Here's a
                     little tip that might help you get back on track.</p>
                 <p v-else>
-                  Why not try refreshing your page? or you can contact <a href="mailto:support@pickwatch.com">support@pickwatch.com</a>
+                  Why not try refreshing your page? or you can contact <a href="mailto:contact@adventurespedia.com">contact@adventurespedia.com</a>
                 </p>
                 <nuxt-link class="btn btn-info mt-3" to="/"><i class="mdi mdi-reply"></i> Return Home</nuxt-link>
             </div>
