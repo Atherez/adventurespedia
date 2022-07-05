@@ -172,7 +172,7 @@ export default {
   },
   head(){
     const title = `${this.post.title.rendered} - ${this.$store.state.config.site_title}`;
-    const description = this.post.excerpt.rendered;
+    const description = this.post.yoast_head_json ? this.post.yoast_head_json.description : '';
     return this.$seo(title, description, this.$route.path, [
       { hid: 'og:image', name: 'og:image', content: this.post.jetpack_featured_media_url },
       { hid: 'twitter:image', name: 'twitter:image', content: this.post.jetpack_featured_media_url },
