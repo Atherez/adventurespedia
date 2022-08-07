@@ -67,6 +67,13 @@
             </v-row>
           </v-col>
         </v-row>
+        <v-row>
+          <v-col cols="12" class="text-center">
+              <v-btn color="primary" depressed class="text--white" href="/posts">
+                <strong>All Posts</strong>
+              </v-btn>
+          </v-col>
+        </v-row>
       </v-container>
       </div>
     </div>

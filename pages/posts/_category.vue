@@ -8,7 +8,7 @@
             :color="(!tag.id && !tags.length) || (tags.includes(tag.id))?'primary':'grey'"
             elevation="2"
             tile
-            v-html="tag.name"
+            v-html="tag?tag.name:'All Posts'"
             @click="updateTag(tag.id)"
           >
           </v-btn>
@@ -60,14 +60,14 @@ export default {
     },
   },
   head(){
-    const title = `${this.$store.state.config.site_title} | ${this.current_category.name}`;
-    const description = this.current_category.description;
+    const title = `${this.$store.state.config.site_title} | ${this.current_category?this.current_category.name: 'All Posts'}`;
+    const description = this.current_category?this.current_category.description : 'All the posts from our writers';
     return this.$seo(title, description, this.$route.path);
   },
   async asyncData({ route, error, store }) {
    const slug = route.params.category
    const page = 1
-   const per_page = 12
+   const per_page = slug ? 12 : 30;
    try{
     let categories = [];
     let posts= [];
@@ -80,7 +80,10 @@ export default {
         cat = cat[0];
       categories.push(cat.id)
       current_category = cat
+    } else{
+      categories = store.state.categories.items.map(cat=>cat.id)
     }
+
     let params = {
         per_page,
         page
@@ -88,6 +91,7 @@ export default {
 
     if(categories.length)
       params['categories'] = categories
+
     const response = await axios.get(`${store.state.config.wp_url}/wp-json/wp/v2/posts`, {
       params
     });
@@ -124,9 +128,9 @@ export default {
           params: {
             categories: this.categories,
             per_page: this.per_page,
-            page: this.page,
+            page: this.page.length,
             tags: this.tags
-            }
+          }
         });
         if(response && response.data && response.data.length){
           if(replace)
