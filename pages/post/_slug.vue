@@ -4,6 +4,9 @@
       <v-row>
         <v-col cols="12">
           <h1 v-html="post.title.rendered"></h1>
+          <!-- Ezoic - under_page_title - under_page_title -->
+          <div id="ezoic-pub-ad-placeholder-101"> </div>
+          <!-- End Ezoic - under_page_title - under_page_title -->
           <v-row class="mt-0" align="center">
             <v-col cols="auto" color="primary" class="py-0">
               <v-btn

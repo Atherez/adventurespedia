@@ -15,6 +15,9 @@
         </v-col>
       </v-row>
       <client-only>
+      <!-- Ezoic - under_page_title - under_page_title -->
+      <div id="ezoic-pub-ad-placeholder-101"> </div>
+      <!-- End Ezoic - under_page_title - under_page_title -->
       <v-row>
         <v-col cols="12" sm="6" md="4" v-for="post of posts" :key="post.slug">
           <post-item-vertical  :post="post"/>

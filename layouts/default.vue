@@ -139,6 +139,13 @@
   <v-footer
     color="blue-grey darken-4"
   >
+    <v-row>
+     <v-col cols="12">
+        <!-- Ezoic - bottom_of_page - bottom_of_page -->
+        <div id="ezoic-pub-ad-placeholder-163"> </div>
+        <!-- End Ezoic - bottom_of_page - bottom_of_page -->
+     </v-col>
+    </v-row>
     <v-row
       justify="start"
       no-gutters

@@ -22,6 +22,11 @@
          <v-col cols="12" md="6" class="text-center text-body-2 pt-0">
           {{ current_author.description}}
         </v-col>
+        <v-col cols="12">
+          <!-- Ezoic - under_page_title - under_page_title -->
+          <div id="ezoic-pub-ad-placeholder-101"> </div>
+          <!-- End Ezoic - under_page_title - under_page_title -->
+        </v-col>
       </v-row>
       <v-row>
         <v-col cols="12" sm="6" md="4" v-for="post of posts" :key="post.slug">
